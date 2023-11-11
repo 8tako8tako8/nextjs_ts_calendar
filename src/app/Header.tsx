@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import React from 'react'
+import Link from "next/link";
+import React from "react";
 
 const Header = () => {
   return (
@@ -12,15 +12,15 @@ const Header = () => {
       <div>
         <nav className="text-sm font-medium">
           <Link
-            href="/articles/new"
-            className="bg-blue-300 px-3 py-3 rounded-md"
+            href="/schedules/new"
+            className="bg-blue-500 px-3 py-3 rounded-md text-white"
           >
             予定を追加する
           </Link>
         </nav>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

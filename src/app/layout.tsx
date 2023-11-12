@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "./Header";
 import { Suspense } from "react";
 import Loading from "./loading";
-import Footer from "./Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,11 +21,9 @@ export default function RootLayout({
       <head />
       <body className="container mx-auto">
         <div className="flex flex-col h-screen">
-          <Header />
           <main className="flex-grow">
             <Suspense fallback={<Loading />}>{children}</Suspense>
           </main>
-          <Footer />
         </div>
       </body>
     </html>

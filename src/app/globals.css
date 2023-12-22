@@ -2,26 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.w-1-7 {
+  width: 14.2857143%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.h-1-5 {
+  height: 20%;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* modal */
+.modalArea {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.4s;
+}
+.modalActive {
+  visibility: visible;
+  opacity: 1;
+}
+.modalInActive {
+  visibility: hidden;
+  opacity: 0;
+}
+.modalWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  max-width: 500px;
+  padding: 10px 30px;
+  background-color: #fff;
 }

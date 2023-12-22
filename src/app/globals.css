@@ -9,3 +9,34 @@
 .h-1-5 {
   height: 20%;
 }
+
+/* modal */
+.modalArea {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.4s;
+}
+.modalActive {
+  visibility: visible;
+  opacity: 1;
+}
+.modalInActive {
+  visibility: hidden;
+  opacity: 0;
+}
+.modalWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  max-width: 500px;
+  padding: 10px 30px;
+  background-color: #fff;
+}
